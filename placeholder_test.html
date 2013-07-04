@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>模拟placeholder</title>
+    <style type="text/css">
+        #t2{ position: absolute; top: 300px; left: 500px; }
+        #t3{ height: 24px; line-height: 24px; border: 1px solid #f60; }
+        #t4{ height: 36px; line-height: 36px; }
+        #t4::-webkit-input-placeholder{ color: blue; font-size: 18px; }
+        #t4:-moz-placeholder{ color: blue; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h1>模拟placeholder，用IE系列浏览器打开</h1>
+    <label for="t1">默认效果：</label><input type="password" id="t1" placeholder="littledu" class="placeholder" /> <br /><br /><br />
+            
+    <label for="t2" style="position:absolute; top:304px; left:426px;">定位效果：</label><input type="text" id="t2" placeholder="littledu"  class="placeholder" />
+    <label for="t3">有样式的效果：</label><input type="text" id="t3" placeholder="littledu"  class="placeholder" /> <br /><br /><br />
+    <label for="t4">更改placeholder样式的效果：</label><input type="text" id="t4" placeholder="littledu"  /> <br />
+    <script src="jquery-1.10.0.min.js"></script>
+    <script src="jquery-placeholder.js"></script>
+<script type="text/javascript">
+
+    $('.placeholder').fixPlaceholder();
+    $('#t4').fixPlaceholder({
+        color: 'blue',
+        fontSize: '18px'
+    })
+                  
+</script>
+</body>
+</html>
